@@ -1,9 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>layout header</div>
+  <!-- 前台layout -->
+  <Header />
   <slot />
-  <div>layout footer</div>
+  <Footer />
 </template>
 
 <style scoped></style>

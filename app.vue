@@ -1,7 +1,11 @@
 <template>
-  <h1>最外層的 App.vue </h1>
   <NuxtRouteAnnouncer />
-  <NuxtLayout>
+  <NuxtLayout :name="layout.value">
+  <!-- <NuxtLayout> -->
     <NuxtPage />
   </NuxtLayout>
 </template>
+
+<script setup>
+  const layout = useLayoutManager(); 
+</script>
