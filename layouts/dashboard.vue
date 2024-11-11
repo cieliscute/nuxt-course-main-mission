@@ -2,9 +2,9 @@
 
 <template>
   <!-- 後台layout -->
-  <div>another layout header</div>
+  <div>dashboard header</div>
   <slot />
-  <div>another layout footer</div>
+  <div>dashboard footer</div>
 </template>
 
 <style scoped></style>
