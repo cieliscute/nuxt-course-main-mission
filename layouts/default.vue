@@ -2,9 +2,11 @@
 
 <template>
   <!-- 前台layout -->
-  <Header />
+  <!-- <Header /> -->
+  <div>default header</div>
   <slot />
-  <Footer />
+  <div>default footer</div>
+  <!-- <Footer /> -->
 </template>
 
 <style scoped></style>

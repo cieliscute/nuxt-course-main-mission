@@ -31,6 +31,7 @@ const roomSwiper = ref(null);
 </script>
 
 <template>
+  <Header />
   <main class="overflow-hidden">
     <section class="hero position-relative">
       <swiper

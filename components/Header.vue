@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed } from 'vue';
-import { useRoute } from 'vue-router'
-import { Icon } from '@iconify/vue';
+// import { ref, onMounted, onUnmounted, computed } from 'vue';
+// import { useRoute } from 'vue-router'
 
 const transparentBgRoute = ['home', 'rooms'];
 
@@ -30,6 +29,8 @@ onUnmounted(() => {
   <header
     :class="{
       'scrolled': isScrolled,
+      'bg-transparent': true,
+      'bg-neutral-120': false
     }"
     class="position-fixed top-0 z-3 w-100 bg-dark"
   >

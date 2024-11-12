@@ -1,11 +1,11 @@
 <template>
-  <NuxtRouteAnnouncer />
-  <NuxtLayout :name="layout.value">
+  <!-- <NuxtRouteAnnouncer /> -->
+  <!-- <NuxtLayout :name="layout.value"> -->
   <!-- <NuxtLayout> -->
     <NuxtPage />
-  </NuxtLayout>
+  <!-- </NuxtLayout> -->
 </template>
 
 <script setup>
-  const layout = useLayoutManager(); 
+  // const layout = useLayoutManager(); 
 </script>
