@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  layout:'another'
+  layout:'dashboard'
 })
 </script>
 
