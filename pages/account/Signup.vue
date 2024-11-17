@@ -1,5 +1,21 @@
 <script setup>
 const isEmailAndPasswordValid = ref(false);
+
+const mail=ref('');
+const formData=reactive({
+  mail:'',
+  password:'',
+  passwordCheck:''
+})
+
+const checkIsEmailAndPasswordValid=()=>{
+  if(formData.password!==formData.passwordCheck){
+    alert('not same');
+  }else{
+    console.log('same');
+  }
+}
+
 </script>
 <template>
   <div class="p-5 px-md-0 py-md-30">
@@ -43,24 +59,32 @@ const isEmailAndPasswordValid = ref(false);
             電子信箱
           </label>
           <input id="email" class="form-control p-4 text-neutral-100 fw-medium border-neutral-40"
-            placeholder="hello@exsample.com" type="email">
+            placeholder="hello@exsample.com" type="email"
+            v-model="formData.mail"
+            >
         </div>
         <div class="mb-4 fs-8 fs-md-7">
-          <label class="mb-2 text-neutral-0 fw-bold" for="password">
+          <label class="mb-2 text-neutral-0 fw-bold" for="password"
+          >
             密碼
           </label>
           <input id="password" class="form-control p-4 text-neutral-100 fw-medium border-neutral-40" placeholder="請輸入密碼"
-            type="password">
+            type="password"
+            v-model="formData.password"
+            >
         </div>
         <div class="mb-10 fs-8 fs-md-7">
           <label class="mb-2 text-neutral-0 fw-bold" for="confirmPassword">
             確認密碼
           </label>
           <input id="confirmPassword" class="form-control p-4 text-neutral-100 fw-medium border-neutral-40"
-            placeholder="請再輸入一次密碼" type="password">
+            placeholder="請再輸入一次密碼" type="password"
+            v-model="formData.passwordCheck"
+            >
         </div>
         <button class="btn btn-neutral-40 w-100 py-4 text-neutral-60 fw-bold" type="button"
-          @click="isEmailAndPasswordValid = true">
+          @click="checkIsEmailAndPasswordValid">
+          <!-- @click="isEmailAndPasswordValid = true"> -->
           下一步
         </button>
       </form>

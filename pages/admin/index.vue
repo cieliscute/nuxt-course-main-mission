@@ -1,13 +1,6 @@
-<script setup lang="ts">
-definePageMeta({
-  layout:'dashboard'
-})
+<script setup>
 </script>
-
 <template>
-  <div>
-    Page: admin/index
-  </div>
+  admin
 </template>
-
 <style scoped></style>

@@ -36,7 +36,6 @@ const roomImages = computed(() => {
 
 </script>
 <template>
-  <Header />
   <main>
     <section class="hero position-relative">
       <swiper

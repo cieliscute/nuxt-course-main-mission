@@ -1,13 +1,10 @@
 <script setup lang="ts">
-// import { ref, onMounted, onUnmounted, computed } from 'vue';
-// import { useRoute } from 'vue-router'
+const route = useRoute();
 
-const transparentBgRoute = ['home', 'rooms'];
 
-// const route = useRoute();
-
-// const isTransparentRoute = computed(() => transparentBgRoute.includes(route.path));
-
+const isTransparentRoute = computed(() => {
+  return route.path === '/' || route.path.startsWith('/rooms');
+});
 
 const isScrolled = ref(false);
 
@@ -26,11 +23,14 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <!-- <p class="m-0 z-3 text-white bg-dark" style="padding-top:200px;">
+    {{route.path}}
+  </p> -->
   <header
     :class="{
       'scrolled': isScrolled,
-      'bg-transparent': true,
-      'bg-neutral-120': false
+      'bg-transparent':isTransparentRoute,
+      'bg-neutral-120':!isTransparentRoute
     }"
     class="position-fixed top-0 z-3 w-100 bg-dark"
   >
